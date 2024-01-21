@@ -1,0 +1,13 @@
+#square {
+  background-color: red;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
