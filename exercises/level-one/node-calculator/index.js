@@ -1,13 +1,7 @@
 let readLineSync = require('readline-sync');
 
-let addFirstNum;
-let addSecondNum;
-let subtractFirstNum;
-let subtractSecondNum;
-let multiplyFirstNum;
-let multiplySecondNum;
-let divideFirstNum;
-let divideSecondNum;
+let num1;
+let num2;
 
 const userPrompt = parseInt(
   readLineSync.keyIn(
@@ -17,117 +11,99 @@ const userPrompt = parseInt(
 );
 
 if (userPrompt === 1) {
-  addFirstNum = parseInt(
+  num1 = parseInt(
     readLineSync.question('What is the first number you would like to add? ')
   );
 
   //Checks for NaN and will continue to prompt user until a number is entered.
-  while (isNaN(addFirstNum)) {
-    addFirstNum = parseInt(readLineSync.question('Please enter a number: '));
+  while (isNaN(num1)) {
+    num1 = parseInt(readLineSync.question('Please enter a number: '));
   }
-  addSecondNum = parseInt(
+  num2 = parseInt(
     readLineSync.question('What is the second number you would like to add?  ')
   );
-  while (isNaN(addSecondNum)) {
-    addSecondNum = parseInt(readLineSync.question('Please enter a number: '));
+  while (isNaN(num2)) {
+    num2 = parseInt(readLineSync.question('Please enter a number: '));
   }
 
-  console.log(`The result is: ${addNumbers(addFirstNum, addSecondNum)}.`);
+  console.log(`The result is: ${addNumbers(num1, num2)}.`);
 } else if (userPrompt === 2) {
-  subtractFirstNum = parseInt(
+  num1 = parseInt(
     readLineSync.question(
       'Which is the first number you would like to subtract? '
     )
   );
 
-  while (isNaN(subtractFirstNum)) {
-    subtractFirstNum = parseInt(
-      readLineSync.question('Please enter a number: ')
-    );
+  while (isNaN(num1)) {
+    num1 = parseInt(readLineSync.question('Please enter a number: '));
   }
-  subtractSecondNum = parseInt(
+  num2 = parseInt(
     readLineSync.question(
       'Which is the second number you would like to subtract? '
     )
   );
 
-  while (isNaN(subtractSecondNum)) {
-    subtractSecondNum = parseInt(
-      readLineSync.question('Please enter a number: ')
-    );
+  while (isNaN(num2)) {
+    num2 = parseInt(readLineSync.question('Please enter a number: '));
   }
 
-  console.log(
-    `The result is: ${subtractNumbers(subtractFirstNum, subtractSecondNum)}.`
-  );
+  console.log(`The result is: ${subtractNumbers(num1, num2)}.`);
 } else if (userPrompt === 3) {
-  multiplyFirstNum = parseInt(
+  num1 = parseInt(
     readLineSync.question(
       'Which is the first number you would like to multiply? '
     )
   );
 
-  while (isNaN(multiplyFirstNum)) {
-    multiplyFirstNum = parseInt(
-      readLineSync.question('Please enter a number: ')
-    );
+  while (isNaN(num1)) {
+    num1 = parseInt(readLineSync.question('Please enter a number: '));
   }
-  multiplySecondNum = parseInt(
+  num2 = parseInt(
     readLineSync.question(
       'Which is the second number you would like to multiply? '
     )
   );
 
-  while (isNaN(multiplySecondNum)) {
-    multiplySecondNum = parseInt(
-      readLineSync.question('Please enter a number: ')
-    );
+  while (isNaN(num2)) {
+    num2 = parseInt(readLineSync.question('Please enter a number: '));
   }
 
-  console.log(
-    `The result is: ${multiplyNumbers(multiplyFirstNum, multiplySecondNum)}.`
-  );
+  console.log(`The result is: ${multiplyNumbers(num1, num2)}.`);
 } else {
-  divideFirstNum = parseInt(
+  num1 = parseInt(
     readLineSync.question(
       'Which is the first number you would like to divide? '
     )
   );
-
-  while (isNaN(divideFirstNum)) {
-    divideFirstNum = parseInt(readLineSync.question('Please enter a number. '));
+  while (isNaN(num1)) {
+    num1 = parseInt(readLineSync.question('Please enter a number: '));
   }
 
-  divideSecondNum = parseInt(
+  num2 = parseInt(
     readLineSync.question(
       'Which is the second number you would like to divide? '
     )
   );
-
-  while (isNaN(divideSecondNum)) {
-    divideSecondNum = parseInt(
-      readLineSync.question('Please enter a number: ')
-    );
+  while (isNaN(num2)) {
+    num2 = parseInt(readLineSync.question('Please enter a number: '));
   }
 
-  console.log(
-    `The result is: ${divideNumbers(divideFirstNum, divideSecondNum)}.`
-  );
+  console.log(`The result is: ${divideNumbers(num1, num2)}.`);
 }
 
-function addNumbers(addFirstNum, addSecondNum) {
-  return addFirstNum + addSecondNum;
+function addNumbers(num1, num2) {
+  return num1 + num2;
 }
 
-function subtractNumbers(subtractFirstNum, subtractSecondNum) {
-  return subtractFirstNum - subtractSecondNum;
+function subtractNumbers(num1, num2) {
+  return num1 - num2;
 }
 
-function multiplyNumbers(multiplyFirstNum, multiplySecondNum) {
-  return multiplyFirstNum * multiplySecondNum;
+function multiplyNumbers(num1, num2) {
+  return num1 * num2;
 }
 
-function divideNumbers(divideFirstNum, divideSecondNum) {
-  const result = divideFirstNum / divideSecondNum;
+function divideNumbers(num1, num2) {
+  const result = num1 / num2;
   return result.toFixed(2);
 }
