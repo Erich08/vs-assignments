@@ -19,9 +19,11 @@ if (userPrompt === 1) {
   while (isNaN(num1)) {
     num1 = parseInt(readLineSync.question('Please enter a number: '));
   }
+
   num2 = parseInt(
     readLineSync.question('What is the second number you would like to add?  ')
   );
+
   while (isNaN(num2)) {
     num2 = parseInt(readLineSync.question('Please enter a number: '));
   }
@@ -37,6 +39,7 @@ if (userPrompt === 1) {
   while (isNaN(num1)) {
     num1 = parseInt(readLineSync.question('Please enter a number: '));
   }
+
   num2 = parseInt(
     readLineSync.question(
       'Which is the second number you would like to subtract? '
@@ -58,6 +61,7 @@ if (userPrompt === 1) {
   while (isNaN(num1)) {
     num1 = parseInt(readLineSync.question('Please enter a number: '));
   }
+
   num2 = parseInt(
     readLineSync.question(
       'Which is the second number you would like to multiply? '
@@ -75,6 +79,7 @@ if (userPrompt === 1) {
       'Which is the first number you would like to divide? '
     )
   );
+
   while (isNaN(num1)) {
     num1 = parseInt(readLineSync.question('Please enter a number: '));
   }
@@ -84,6 +89,7 @@ if (userPrompt === 1) {
       'Which is the second number you would like to divide? '
     )
   );
+
   while (isNaN(num2)) {
     num2 = parseInt(readLineSync.question('Please enter a number: '));
   }
