@@ -18,49 +18,42 @@ const userPrompt = parseInt(
 
 if (userPrompt === 1) {
   addFirstNum = parseInt(
-    readLineSync.question(
-      'What is the first number you would like to add? Please select a number between 0 and 100: '
-    )
+    readLineSync.question('What is the first number you would like to add? ')
   );
 
+  //Checks for NaN and will continue to prompt user until a number is entered.
   while (isNaN(addFirstNum)) {
-    addFirstNum = parseInt(
-      readLineSync.question('Please enter a number between 0-100: ')
-    );
+    addFirstNum = parseInt(readLineSync.question('Please enter a number: '));
   }
   addSecondNum = parseInt(
-    readLineSync.question(
-      'What is the second number you would like to add? Please select a number between 0 and 100: '
-    )
+    readLineSync.question('What is the second number you would like to add?  ')
   );
   while (isNaN(addSecondNum)) {
-    addSecondNum = parseInt(
-      readLineSync.question('Please enter a number between 0-100: ')
-    );
+    addSecondNum = parseInt(readLineSync.question('Please enter a number: '));
   }
 
   console.log(`The result is: ${addNumbers(addFirstNum, addSecondNum)}.`);
 } else if (userPrompt === 2) {
   subtractFirstNum = parseInt(
     readLineSync.question(
-      'Which is the first number you would like to subtract? Please select a number between 0 and 100: '
+      'Which is the first number you would like to subtract? '
     )
   );
 
   while (isNaN(subtractFirstNum)) {
     subtractFirstNum = parseInt(
-      readLineSync.question('Please enter a number between 0-100: ')
+      readLineSync.question('Please enter a number: ')
     );
   }
   subtractSecondNum = parseInt(
     readLineSync.question(
-      'Which is the first number you would like to subtract? Please select a number between 0 and 100: '
+      'Which is the second number you would like to subtract? '
     )
   );
 
   while (isNaN(subtractSecondNum)) {
     subtractSecondNum = parseInt(
-      readLineSync.question('Please enter a number between 0-100: ')
+      readLineSync.question('Please enter a number: ')
     );
   }
 
@@ -70,24 +63,24 @@ if (userPrompt === 1) {
 } else if (userPrompt === 3) {
   multiplyFirstNum = parseInt(
     readLineSync.question(
-      'Which is the first number you would like to multiply? Please select a number between 0 and 100: '
+      'Which is the first number you would like to multiply? '
     )
   );
 
   while (isNaN(multiplyFirstNum)) {
     multiplyFirstNum = parseInt(
-      readLineSync.question('Please enter a number between 0-100: ')
+      readLineSync.question('Please enter a number: ')
     );
   }
   multiplySecondNum = parseInt(
     readLineSync.question(
-      'Which is the first number you would like to multiply? Please select a number between 0 and 100: '
+      'Which is the second number you would like to multiply? '
     )
   );
 
   while (isNaN(multiplySecondNum)) {
     multiplySecondNum = parseInt(
-      readLineSync.question('Please enter a number between 0-100: ')
+      readLineSync.question('Please enter a number: ')
     );
   }
 
@@ -97,25 +90,23 @@ if (userPrompt === 1) {
 } else {
   divideFirstNum = parseInt(
     readLineSync.question(
-      'Which is the first number you would like to divide? Please select a number between 0 and 100: '
+      'Which is the first number you would like to divide? '
     )
   );
 
   while (isNaN(divideFirstNum)) {
-    divideFirstNum = parseInt(
-      readLineSync.question('Please enter a number between 0-100: ')
-    );
+    divideFirstNum = parseInt(readLineSync.question('Please enter a number. '));
   }
 
   divideSecondNum = parseInt(
     readLineSync.question(
-      'Which is the first number you would like to divide? Please select a number between 0 and 100: '
+      'Which is the second number you would like to divide? '
     )
   );
 
   while (isNaN(divideSecondNum)) {
     divideSecondNum = parseInt(
-      readLineSync.question('Please enter a number between 0-100: ')
+      readLineSync.question('Please enter a number: ')
     );
   }
 
